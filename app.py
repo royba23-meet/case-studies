@@ -1,3 +1,2 @@
-import requests as r
-
-r.patch("https://individual-project-2c4bc-default-rtdb.europe-west1.firebasedatabase.app/", data={"name": "John"})
+import os 
+from flask import Flask, jsonify, render_template, redirect, session, url_for
