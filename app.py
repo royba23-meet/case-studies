@@ -1,11 +1,19 @@
 import os
-from flask import Flask, jsonify, render_template, redirect, session, url_for
+from werkzeug.datastructures import ImmutableMultiDict
+from flask import Flask, flash, jsonify, render_template, redirect, request, session, url_for
+import xmltodict
 
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        surname = request.form.get('surname')
+        message = request.form.get('message')
+        print(name, surname, message)
+        return render_template('index.html')
     return render_template('index.html')
 
 
