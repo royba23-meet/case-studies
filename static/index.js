@@ -8,36 +8,6 @@ xhr.setRequestHeader('Content-Type', 'application/json');
 
 
 
-// btn.addEventListener('click', async () => {
-//   if (await checkOnlineStatus())
-//   {
-//     data.append('name', document.getElementById("name").value);
-//     data.append('surname', document.getElementById("surname").value);
-//     data.append('message', document.getElementById("message").value);
-//     dict = {'name' : data.get('name'), 'surname' : data.get('surname'), 'message' : data.get('message')};
-//     console.log(dict);
-//     console.log('Message sent | Information uploaded to database')
-//   }
-//   else { 
-//     console.log('Message not sent | No connection to internet');
-//     const interval = setInterval(async () => {
-//       if (await checkOnlineStatus())
-//       {
-//         data.append('name', document.getElementById("name").value);
-//         data.append('surname', document.getElementById("surname").value);
-//         data.append('message', document.getElementById("message").value);
-//         dict = {'name' : data.get('name'), 'surname' : data.get('surname'), 'message' : data.get('message')};
-//         console.log(dict);
-//         console.log('Message sent | Information uploaded to database')
-//         clearInterval(interval);
-//       }
-//       else { 
-//         console.log('Message not sent | No connection to internet');
-//       }
-//     }, 15000);
-//    } 
-// });
-
 /*  ********** Online / Offline Detection **********  */
 
 // Request a small image at an interval to determine status
