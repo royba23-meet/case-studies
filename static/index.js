@@ -31,23 +31,23 @@ const checkOnlineStatus = async () => {
       let dict = JSON.stringify({'name' : data.get('name'), 'surname' : data.get('surname'), 'message' : data.get('message')});
       console.log(dict);
       xhr.send(dict);
-      console.log('Message sent | Information uploaded to database')
+      console.log('%c Message sent | Information uploaded to database', 'color: green;')
     }
     else {
-      console.log('Message not sent | No connection to internet');
+      console.log('%c Message not sent | No connection to internet', 'color: red;');
       const interval = setInterval(async () => {
         const result = await checkOnlineStatus();
         if (result) {
           data.append('name', document.getElementById("name").value);
           data.append('surname', document.getElementById("surname").value);
           data.append('message', document.getElementById("message").value);
-          let dict = JSON.stringify(data);
+          let dict = JSON.stringify({'name' : data.get('name'), 'surname' : data.get('surname'), 'message' : data.get('message')});
           xhr.send(dict);
-          console.log('Message sent | Information uploaded to database')
+          console.log('%c Message sent | Information uploaded to database', 'color: green;')
           clearInterval(interval);
         }
         else {
-          console.log('Message not sent | No connection to internet');
+          console.log('%c Message not sent | No connection to internet', 'color: red;');
         }
       }, 15000)}
     });
