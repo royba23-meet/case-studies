@@ -1,7 +1,7 @@
 let btn = document.getElementById("btn");
 let data = new FormData();
 const xhr = new XMLHttpRequest();
-const url = "https://case-studies.herokuapp.com/";
+const url = "http://192.168.15.58:8080/";
 xhr.open('POST', '/', true);
 xhr.setRequestHeader('accept', 'application/json');
 xhr.setRequestHeader('Content-Type', 'application/json');
