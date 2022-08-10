@@ -24,7 +24,7 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 def index():
     if request.method == 'POST':
         db.child("messages").push({"name": request.json['name'], "surname": request.json['surname'], "message": request.json['message']})
-        return render_template('index.html')
+        return redirect(url_for('index'))
     return render_template('index.html')
 
 
