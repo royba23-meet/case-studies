@@ -15,7 +15,7 @@ xhr.setRequestHeader('Content-Type', 'application/json');
 
 const checkOnlineStatus = async () => {
     try {
-      const online = await fetch("http://192.168.15.58:8080");
+      const online = await fetch(url);
       return online.status >= 200 && online.status < 300; // either true or false
     } catch (err) {
       return false; // definitely offline
