@@ -2,3 +2,33 @@ html, body {
     margin: 0;
     height: 100%;
 }
+
+.bg
+{
+    background-image: url("BG.png");
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+}
+/*
+#body
+{
+    opacity: 75%;
+}*/
+
+
+#test
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 85%;
+}
